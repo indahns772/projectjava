@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c94f2ae9-7913-4a8b-8ccf-161a5efb496b">
+	<property name="ireport.zoom" value="1.2100000000000024"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="17"/>
+	<queryString>
+		<![CDATA[SELECT
+     transaksi.`nosim` AS transaksi_nosim,
+     transaksi.`plat_nomor` AS transaksi_plat_nomor,
+     transaksi.`tgl_pinjam` AS transaksi_tgl_pinjam,
+     transaksi.`tgl_kembali` AS transaksi_tgl_kembali,
+     transaksi.`lamasewa` AS transaksi_lamasewa,
+     transaksi.`total` AS transaksi_total
+FROM
+     `transaksi` transaksi]]>
+	</queryString>
+	<field name="transaksi_nosim" class="java.lang.Integer"/>
+	<field name="transaksi_plat_nomor" class="java.lang.String"/>
+	<field name="transaksi_tgl_pinjam" class="java.sql.Date"/>
+	<field name="transaksi_tgl_kembali" class="java.sql.Date"/>
+	<field name="transaksi_lamasewa" class="java.lang.String"/>
+	<field name="transaksi_total" class="java.lang.Integer"/>
+	<variable name="transaksi_total_1" class="java.lang.Integer" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[$F{transaksi_total}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="123" y="0" width="302" height="48" uuid="fe3e20a0-c9d1-4016-83f0-60eb5c9eda85"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="30"/>
+				</textElement>
+				<text><![CDATA[Rental Mobil Södertälje]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="78" y="48" width="389" height="31" uuid="567b054b-2826-421d-9892-8c19d1bfdfae"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jl. Grand Galaxy City Central Park 3, RRGB no. 53, RT.003/RW.017, Jaka Setia, Kec. Bekasi Sel., Kota Bks, Jawa Barat 17147]]></text>
+			</staticText>
+			<image>
+				<reportElement x="22" y="10" width="70" height="59" uuid="5ec1cf37-236c-4ae2-bf88-e67f18fddb9c"/>
+				<imageExpression><![CDATA["C:\\Users\\USER\\Pictures\\mobilll.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="19" width="22" height="20" uuid="c6dbbb19-b394-4996-8949-495a6190b913"/>
+				<textElement>
+					<font fontName="Serif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="19" width="50" height="20" uuid="07b5ec5a-469f-4aaa-a19e-7a2610664a2d"/>
+				<textElement>
+					<font fontName="Serif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NO SIM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="19" width="74" height="20" uuid="bfa630ba-6428-440a-af44-2197acdeeb21"/>
+				<textElement>
+					<font fontName="Serif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PLAT NOMOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="176" y="19" width="98" height="20" uuid="064cf691-687b-4324-b3fa-320d59f289c3"/>
+				<textElement>
+					<font fontName="Serif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TANGGAL PINJAM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="288" y="19" width="111" height="20" uuid="17081779-9f5a-47f3-8ce2-244061e2291d"/>
+				<textElement>
+					<font fontName="Serif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TANGGAL KEMBALI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="416" y="19" width="66" height="20" uuid="b4ca09ee-6bbe-4732-bcab-64aa4794435f"/>
+				<textElement>
+					<font fontName="Serif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAMA SEWA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="502" y="19" width="42" height="20" uuid="c4649cc0-7a5a-4c12-9e55-18470c6ca839"/>
+				<textElement>
+					<font fontName="Serif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="eb16ab46-53ba-4d9c-ab80-baa059956418"/>
+			</line>
+			<line>
+				<reportElement x="0" y="53" width="555" height="1" uuid="9de7e84e-a7db-41c8-90ff-949dde66669f"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="24" width="22" height="20" uuid="251be0d4-775a-4a00-95c3-1fbc62299491"/>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="28" y="24" width="49" height="20" uuid="760ccc01-d3df-4cc8-a3ca-1b05f8eef799"/>
+				<textFieldExpression><![CDATA[$F{transaksi_nosim}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="92" y="24" width="74" height="20" uuid="e60c69b6-bea1-4bf1-8683-a96a04da56fb"/>
+				<textFieldExpression><![CDATA[$F{transaksi_plat_nomor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="176" y="24" width="97" height="20" uuid="c18f44e5-1fb2-4117-9e7c-09ba6c5a6fa5"/>
+				<textFieldExpression><![CDATA[$F{transaksi_tgl_pinjam}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="288" y="24" width="100" height="20" uuid="0b06e89a-2d5b-4be2-801f-a8c4c2f772c2"/>
+				<textFieldExpression><![CDATA[$F{transaksi_tgl_kembali}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="416" y="24" width="66" height="20" uuid="d222c895-cbab-48d1-b08d-0507322f7952"/>
+				<textFieldExpression><![CDATA[$F{transaksi_lamasewa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="502" y="24" width="42" height="20" uuid="fbc11d68-e598-43dc-b769-5141552d99b0"/>
+				<textFieldExpression><![CDATA[$F{transaksi_total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<textField>
+				<reportElement x="502" y="13" width="42" height="20" uuid="b6818b10-27eb-4854-81cf-a97892e165e4"/>
+				<textFieldExpression><![CDATA[$V{transaksi_total_1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
